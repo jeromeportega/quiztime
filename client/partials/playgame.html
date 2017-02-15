@@ -1,0 +1,19 @@
+<h1>Hi {{user}}</h1>
+<p>Choose an answer for each of the questions below and submit the quiz once done!</p>
+<h4>Good Luck!</h4>
+<form ng-submit='checkAnswers()'>
+  <p>1. {{ askquestions[0].question }}</p>
+  <input type='radio' ng-model='group1' value='{{ askquestions[0].rightAnswer }}' ng-required="!group1">{{ askquestions[0].rightAnswer }}<br>
+  <input type='radio' ng-model='group1' value='{{ askquestions[0].wrongOne }}' ng-required="!group1">{{ askquestions[0].wrongOne }}<br>
+  <input type='radio' ng-model='group1' value='{{ askquestions[0].wrongTwo }}' ng-required="!group1">{{ askquestions[0].wrongTwo }}<br>
+  <p>2. {{ askquestions[1].question }}</p>
+  <input type='radio' ng-model='group2' value='{{ askquestions[1].wrongOne }}' ng-required="!group2">{{ askquestions[1].wrongOne }}<br>
+  <input type='radio' ng-model='group2' value='{{ askquestions[1].rightAnswer }}' ng-required="!group2">{{ askquestions[1].rightAnswer }}<br>
+  <input type='radio' ng-model='group2' value='{{ askquestions[1].wrongTwo }}' ng-required="!group2">{{ askquestions[1].wrongTwo }}<br>
+  <p>3. {{ askquestions[2].question }}</p>
+  <input type='radio' ng-model='group3' value='{{ askquestions[2].wrongOne }}' ng-required="!group3">{{ askquestions[2].wrongOne }}<br>
+  <input type='radio' ng-model='group3' value='{{ askquestions[2].wrongTwo }}' ng-required="!group3">{{ askquestions[2].wrongTwo }}<br>
+  <input type='radio' ng-model='group3' value='{{ askquestions[2].rightAnswer }}' ng-required="!group3">{{ askquestions[2].rightAnswer }}<br>
+  <input type='submit' value='Submit Quiz'>
+</form>
+<a href='#!/'>Cancel!</a>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <title>Friends</title>
+    <meta charset="UTF-8">
+    <script src="angular/angular.min.js"></script>
+    <script src="angular-route/angular-route.min.js"></script>
+    <script src="assets/app.js"></script>
+    <script src="assets/questionsFactory.js"></script>
+    <script src="assets/userFactory.js"></script>
+    <script src="assets/gamesFactory.js"></script>
+    <script src="assets/questionsFactory.js"></script>
+    <script src="assets/newQuestionController.js"></script>
+    <script src="assets/newGameController.js"></script>
+    <script src="assets/dashboardController.js"></script>
+  </head>
+  <body>
+    <a href="/">Home</a> | <a href="#!/newquestion">Add A Question</a> | <a href="#!/logout">Log Out</a>
+    <div ng-view=""></div>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<h3>Hello {{ user }}, please submit a new question to test your friends!</h3>
+
+<div ng-repeat="error in errors" ng-if="errors!={}">
+  {{error.message}}
+</div>
+
+<form>
+  <p>Question:</p> <textarea ng-model="newQuestion.question" placeholder="Question" cols='50' rows='5'></textarea>
+  <p>Correct Answer: <textarea ng-model="newQuestion.rightAnswer" placeholder="Right Answer" cols='50' rows='1'></textarea></p>
+  <p>Fake Answer #1: <textarea ng-model="newQuestion.wrongOne" placeholder="Fake Answer #1" cols='50' rows='1'></textarea></p>
+  <p>Fake Answer #2: <textarea ng-model="newQuestion.wrongTwo" placeholder="Fake Answer #2" cols='50' rows='1'></textarea></p>
+  <input type="submit" value="Add" ng-click='create()'>
+</form>
+<a href='#!/'>Cancel!</a>

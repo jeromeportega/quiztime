@@ -1,0 +1,21 @@
+<h2 ng-if='phrase'>{{ phrase }}</h2>
+
+<a href="#!/lets_play">Play!</a>
+<p>Click the button above to start the trivia game!</p>
+<input type="text" placeholder="Search Quiz Results" ng-model="query">
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Score</th>
+      <th>Percentage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="game in games | orderBy: 'score' : true | filter: search">
+      <td>{{ game.name }}</td>
+      <td>{{ game.score }}/3</td>
+      <td>{{ game.score / 3 * 100 | number: 2}}%</td>
+    </tr>
+  </tbody>
+</table>
